@@ -1,0 +1,64 @@
+Package: spaCraft
+Title: spaCraft: Analysis-aware power calculation and
+   sample size planning for multi-sample spatial transcriptomics
+Version: 1.0.1
+Authors@R: c(
+    person("Jungmin", "Shin", email = "c16267@gmail.com",
+           role = c("aut", "cre")),
+    person("Dongjun", "Chung", email = "chung.911@osu.edu",
+           role = "aut"))
+Author: Jungmin Shin [aut, cre],
+  Dongjun Chung [aut]
+Maintainer: Jungmin Shin <c16267@gmail.com>
+Description: Provides a pilot-based framework for statistical power analysis and
+    sample-size determination in comparative, multi-sample spatial
+    transcriptomics studies. A cohort-level generative model is learned from
+    pilot data through three layers: a baseline-anchored Binomial-logit model
+    for domain composition, a Fisher-Gaussian kernel mixture model for spatial
+    geometry (Mukhopadhyay, Li and Dunson (2020) <doi:10.1111/rssb.12390>), and
+    a Gaussian-process expression model fitted with nearest-neighbor
+    approximations (Saha and Datta (2018) <doi:10.1002/sta4.184>). Synthetic
+    cohorts are generated under user-specified effect sizes, spatial domains are
+    recovered with a pilot-guided extension of 'BANKSY' (Singhal et al. (2024)
+    <doi:10.1038/s41588-024-01664-3>), and endpoint-specific power is estimated
+    under a full generate-recover-test pipeline for a spatially adjusted
+    differential-expression test and a baseline-anchored compositional test,
+    both using a minimum-effect 'TREAT' margin (McCarthy and Smyth (2009)
+    <doi:10.1093/bioinformatics/btp053>). Monte-Carlo power estimates are
+    summarized with monotone shape-constrained additive models to recommend
+    per-group sample sizes. The framework supports both replicated and
+    single-pilot designs and has been evaluated across the 'Visium',
+    'Visium HD', and 'Stereo-seq' platforms.
+Depends: 
+    R (>= 4.1.0)
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
+Imports: BRISC, clue, Directional, dplyr, FNN, ggplot2, MASS, Matrix,
+    matrixStats, mclust, MCMCpack, methods, patchwork, Rcpp, scam, stats, limma
+Suggests: data.table, fields, ggrepel, knitr, mgcv, RANN, readr, rmarkdown,
+    RSpectra, Seurat, SingleCellExperiment, SpatialExperiment, spatialLIBD,
+    stringr, testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+biocViews: Software, SingleCell, Spatial, Transcriptomics, GeneExpression,
+    DifferentialExpression, Clustering, Bayesian
+Collate: 
+    'LOR.R'
+    'PowerEvaluation.R'
+    'RcppExports.R'
+    'SaLFC.R'
+    'createspaCraftObject.R'
+    'estimation.R'
+    'featureSelection.R'
+    'fn_FGEM_aux.R'
+    'fn_aux_base.R'
+    'lambda_tuning.R'
+    'pBANSKY.R'
+    'rearrangement.R'
+    'simulatespaCraft.R'
+    'spaCraft-package.R'
