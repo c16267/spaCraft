@@ -1,4 +1,4 @@
-<img src="[spaCraft_symbol.pdf](https://github.com/c16267/spaCraft/blob/main/spaCraft_symbol.pdf)" align="right" height="250" alt="spaCraft logo" />
+<img src="spaCraft_logo.png" align="right" height="250" alt="spaCraft logo" />
 
 # spaCraft
 
