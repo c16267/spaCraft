@@ -1,0 +1,22 @@
+path,platform,species,organ,tissue_detail,condition,disease_model,reference,notes,status
+Visium/human_brain,Visium,human,brain,DLPFC,case vs control,-,Maynard et al. 2021 (spatialLIBD),Human dorsolateral prefrontal cortex,
+Visium/human_brain_MS,Visium,human,brain,white matter (active/chronic lesions),MS lesion vs control WM,multiple sclerosis,Alsema et al. 2024 (Nat Neurosci),White-matter MS lesion progression,
+Visium/5XFAD,Visium,mouse,brain,cortex & hippocampus,5xFAD vs WT,5xFAD,,Amyloid-beta Alzheimer model,
+Visium_HD,Visium HD,human,colorectal,CRC tissue,tumor vs normal,-,,High-resolution Visium HD run,
+Stereo_seq/mouse_embroyo,Stereo-seq,mouse,embryo,E12.5 whole embryo,developmental,-,,Mouse organogenesis (Stereo-seq),
+Visium/human_brain_AD,Visium,human,brain,postmortem cortex,AD vs control,Alzheimer's disease (AD),"Miyoshi et al. 2024, Nat Genet (PMID 36544231)","[sskind_36544231] Human postmortem AD brain; 6 samples (3 disease / 3 healthy), ~25k spots. Disease->case, Healthy->control.",working
+Visium/human_brain_PD,Visium,human,brain,,PD vs control,Parkinson's disease (PD),PMID 37667091,"[sskind_37667091] Human PD brain; 5 samples (4 disease / 1 healthy). Disease->case, Healthy->control.",working
+Visium/mouse_brain_PD,Visium,mouse,brain,,PD-model vs control,Parkinson's disease (PD),PMID 37667091,[sskind_37667091] Mouse PD-model brain; 14 samples (12 disease / 2 healthy); leiden domains.,working
+Visium/mouse_brain_AD,Visium,mouse,brain,,AD-model vs control,Alzheimer's disease (AD),PMID 38036733,[sskind_38036733] Mouse AD-model brain; 4 samples (2 disease / 2 healthy).,working
+Stereo_seq/mouse_brain_AD,Stereo-seq,mouse,brain,high-resolution Stereo-seq,AD-model vs control,Alzheimer's disease (AD),PMID 38819990,"[sskind_38819990] Mouse AD-model brain, Stereo-seq; 3 samples (2 disease / 1 healthy), ~161k spots.",working
+Visium/mouse_skeleton_muscle,Visium,mouse,skeletal muscle,ALS model,ALS-model vs control,Amyotrophic lateral sclerosis (ALS),PMID 39932195,[sskind_39932195] Mouse ALS-model skeletal muscle; 7 samples (5 disease / 2 healthy).,working
+Visium/mouse_brain_HD,Visium,mouse,brain,,HD-model vs control,Huntington's disease (HD),PMID 40482637,[sskind_40482637] Mouse HD-model brain; 16 samples (8 disease / 8 healthy).,working
+Visium/mouse_bone,Visium,mouse,bone,femur / bone marrow (FFPE),random 50/50 split (benchmark),-,GSE221571; PMID 36720873,"[loki_1] Murine bone-marrow ST; 6 samples, ~9.8k spots; case/control = random split (seed 42).",working
+Visium/mouse_brain,Visium,mouse,brain,,random 50/50 split (benchmark),-,GSE221571; PMID 36720873,[loki_1] Mouse brain ST; 8 samples; case/control = random split (seed 42).,working
+Visium/organoid_kidney,Visium,human,kidney organoid,FFPE kidney organoid,random 50/50 split (benchmark),-,"Villacampa et al. 2023, Cell Genomics; GSE185715 (PMID 36776149)","[loki_2] Human kidney organoid, FFPE Visium; 3 samples; case/control = random split (seed 42).",working
+Visium/organoid_lung,Visium,human,lung organoid,FFPE lung organoid,random 50/50 split (benchmark),-,"Villacampa et al. 2023, Cell Genomics; GSE185716 (PMID 36776149)","[loki_2] Human lung organoid, FFPE Visium; 4 samples; case/control = random split (seed 42).",working
+Visium/mouse_brain_2,Visium,mouse,brain,hippocampus (FFPE),random 50/50 split (benchmark),-,"Villacampa et al. 2023, Cell Genomics; GSE185717 (PMID 36776149)","[loki_2] Mouse brain (hippocampus), FFPE Visium; 7 samples; case/control = random split (seed 42).",working
+Visium/human_breast,Visium,human,breast,breast tumor section,spot-level 50/50 split (single section),breast cancer,GSE243280; PMID 38114474,"[loki_3] Human breast-cancer section; 1 sample split spot-level (2496/2496, seed 42).",working
+Visium/mouse_brain_3,Visium,mouse,brain,,random 50/50 split (benchmark),-,E-MTAB-11114; PMID 35027729,[loki_5] Mouse brain ST; 5 samples; case/control = random split (seed 42).,working
+Visium/human_heart_1,Visium,human,heart,,control vs case (by sample name),heart (control vs case),Zenodo 6578047; PMID 35948637,"[loki_6] Human heart ST; 27 samples (4 control / 23 case by sample name), ~89k spots.",working
+Visium/human_heart_2,Visium,human,heart,Heart Cell Atlas,random 50/50 split (benchmark),-,"Kanemaru et al. 2023, Nature (Heart Cell Atlas); PMID 37438528",[loki_8] Human heart ST (Heart Cell Atlas); 9 samples; region domains; random split (seed 42).,working
