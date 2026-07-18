@@ -139,6 +139,8 @@ tuning <- tuneSpaDesignLambdas(
   G_DE        = sets$G_spike,
   scenario_H1 = list(DE_lfc = c(0.30, 0.35, 0.40),
                      target_prop_case = c(0.65, 0.70, 0.75)),
+  lambda_p_grid = seq(0.1, 0.9, by = 0.1),
+  lambda_c_grid = seq(0.1, 0.9, by = 0.1),
   B = 10, K_syn = 10, n_cores = 4
 )
 summary(tuning)
