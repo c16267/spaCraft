@@ -124,11 +124,23 @@ target power (default 0.8) for each effect size.
 library(spaCraft)
 
 ## 0 — Example pilot data (see "Example data" above) ---------------------------
-base <- "https://github.com/c16267/spaCraft/releases/download/v1.0.1/"
-load(url(paste0(base, "mini_pilot_data_list.rda")))
+# load pilot data (DLPFC) from Dr. Chung's lab Server.
+data_url <- "https://chunglab.bmi.osumc.edu/spaCraft/visium_human_brain_pilot_data_list.RData"
+cache_dir <- tools::R_user_dir("spaCraft", "cache")
+dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
+dest <- file.path(cache_dir, basename(data_url))
+if (!file.exists(dest) || file.info(dest)$size < 1e6) {
+  options(timeout = max(3600, getOption("timeout")))     
+  utils::download.file(data_url, destfile = dest, mode = "wb")
+}
+
+.e <- new.env(); load(dest, envir = .e)
+message("Loaded from server: ", paste(ls(.e), collapse = ", "))
+pilot_data_list <- .e[[ ls(.e)[1L] ]]
+rm(.e)
 
 ## 1 — Pilot data  ->  spaCraft object -----------------------------------------
-obj <- createspaCraftObject(mini_pilot_data_list)   # auto pseudo-reps if K = 1
+obj <- createspaCraftObject(pilot_data_list)   # auto pseudo-reps if K = 1
 
 ## 2 — Feature selection (domain-informative + stable/null genes) --------------
 obj <- featureSelection(obj,       max_num_gene = 20)
