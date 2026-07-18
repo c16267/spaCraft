@@ -74,32 +74,6 @@ Heavy steps are parallelized via `n_cores` (forked; falls back to serial on Wind
 
 ---
 
-## Example data
-
-The example objects are **not bundled with the package** — the fitted pilot objects are
-large enough to make the source tarball impractical. They are published as release
-assets instead and load directly from R:
-
-```r
-base <- "https://github.com/c16267/spaCraft/releases/download/v1.0.1/"
-
-load(url(paste0(base, "mini_pilot_data_list.rda")))   # -> mini_pilot_data_list
-load(url(paste0(base, "mini_obj_fitted.rda")))        # -> mini_obj_fitted
-load(url(paste0(base, "mini_custom_genes.rda")))      # -> mini_custom_genes
-```
-
-| Object | Description |
-|--------|-------------|
-| `mini_pilot_data_list` | Downsampled human DLPFC pilot (Maynard et al. 2021, via `spatialLIBD`) in input format |
-| `mini_spaCraft_obj`    | Object created from the pilot (unfitted) |
-| `mini_obj_features`    | After `featureSelection` / `featureSelectionStable` |
-| `mini_obj_fitted`      | Fully fitted (composition + geometry + expression) — ready for power evaluation |
-| `mini_custom_genes`    | Labeling (`G_svg`), null (`G_null`), and spike-in (`G_spike`) gene sets for "WM" vs "Layer6" |
-
-Each `.rda` holds a single object whose name matches the file name, so `load(url(...))`
-brings it into your session under the name above.
-
----
 
 ## Input format
 
