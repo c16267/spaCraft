@@ -156,12 +156,12 @@ sets <- makeCustomGeneSets(
   G_stable         = obj@params_expression$stable_genes,
   target_domain    = "WM",
   reference_domain = "Layer6",
-  n_de             = 5L
+  n_de             = 5L #number of spike genes
 )
 
 ## 4 — Fit the three-layer generative model ------------------------------------
 obj <- estimateCompositionParams(obj, target_domain = "WM", reference_domain = "Layer6")
-obj <- estimateGeometryParams   (obj, n_cores = 4)
+obj <- estimateGeometryParams   (obj, n_cores = 4) #please check n_cores for your environment
 obj <- estimateExpressionParams (obj, target_domain = "WM", reference_domain = "Layer6",
                                  genes_to_use = sets$G_svg, n_cores = 4)
 
@@ -193,7 +193,7 @@ powLOR <- evaluatePowerLOR(
   obj, K_grid = 3:8, delta_grid = c(0.60, 0.70, 0.80),
   genes = sets$G_svg, target_domain = "WM", reference_domain = "Layer6",
   effect_type = "target_prop_case",
-  n_sim = 30, tuning_obj = tuning, n_cores = 4
+  n_sim = 50, tuning_obj = tuning, n_cores = 4
 )
 summary(powLOR, target_power = 0.8)     # min K per effect + empirical size
 plotPowerCurveLOR(powLOR)
