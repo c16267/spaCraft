@@ -123,21 +123,22 @@ target power (default 0.8) for each effect size.
 ```r
 library(spaCraft)
 
+## 0 — Example pilot data: full Visium human-brain (DLPFC) pilot list ----------
+##     downloaded on-the-fly from the chunglab server (publicly reachable)
 data_url <- "https://chunglab.bmi.osumc.edu/spaCraft/visium_human_brain_pilot_data_list.RData"
-# (Inside the OSUMC VPN you can also use:
-#  data_url <- "http://10.98.10.57:3838/spaCraft/visium_human_brain_pilot_data_list.RData")
 
 ## cache the ~350 MB file so it downloads only once
 cache_dir <- tools::R_user_dir("spaCraft", "cache")
 dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
 dest <- file.path(cache_dir, basename(data_url))
 if (!file.exists(dest) || file.info(dest)$size < 1e6) {
-  options(timeout = max(3600, getOption("timeout")))   # large file: raise 60s default
-  utils::download.file(data_url, destfile = dest, mode = "wb")   # mode="wb" = binary
+  options(timeout = max(3600, getOption("timeout")))       # ~350 MB: raise 60s default
+  utils::download.file(data_url, destfile = dest, mode = "wb")   # mode = "wb" = binary
 }
 
 ## the file stores a single object named `pilot_data_list`
 load(dest)                       # -> creates `pilot_data_list` in the workspace
+stopifnot(exists("pilot_data_list"))
 
 ## 1 — Pilot data  ->  spaCraft object -----------------------------------------
 obj <- createspaCraftObject(pilot_data_list)   # auto pseudo-reps if K = 1
