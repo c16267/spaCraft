@@ -19,7 +19,9 @@ Unlike single-cell power tools, `spaCraft` is built for the structure that defin
 spatial data: it models **domain composition**, **spatial geometry**, and **spatially
 correlated expression** jointly, re-discovers spatial domains in every synthetic
 replicate, and evaluates the *same* tests an analyst would actually run — so the
-reported power reflects the real analysis pipeline, not an idealized oracle.
+reported power reflects the real analysis pipeline, not an idealized oracle. 
+Anyone can explore **spaCraft** interactively via the R Shiny app at
+[chunglab.bmi.osumc.edu/spaCraft](https://chunglab.bmi.osumc.edu/spaCraft/).
 
 ---
 
