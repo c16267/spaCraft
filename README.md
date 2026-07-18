@@ -141,7 +141,7 @@ tuning <- tuneSpaDesignLambdas(
                      target_prop_case = c(0.65, 0.70, 0.75)),
   lambda_p_grid = seq(0.1, 0.9, by = 0.1),
   lambda_c_grid = seq(0.1, 0.9, by = 0.1),
-  B = 10, K_syn = 10, n_cores = 4
+  B = 30, K_syn = 5, n_cores = 4
 )
 summary(tuning)
 plot(tuning)
