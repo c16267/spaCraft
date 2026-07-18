@@ -1,4 +1,4 @@
-<img src="man/figures/logo.png" align="right" height="250" alt="spaCraft logo" />
+<img src="spaCraft_symbol.pdf" align="right" height="250" alt="spaCraft logo" />
 
 # spaCraft
 
