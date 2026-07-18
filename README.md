@@ -144,8 +144,10 @@ stopifnot(exists("pilot_data_list"))
 obj <- createspaCraftObject(pilot_data_list)   # auto pseudo-reps if K = 1
 
 ## 2 — Feature selection (domain-informative + stable/null genes) --------------
-obj <- featureSelection(obj,       max_num_gene = 20)
-obj <- featureSelectionStable(obj, max_num_gene = 50)
+obj <- featureSelection(object = obj, logfc_cutoff = 0.5, mean_in_cutoff = 0.8, max_num_gene = 3)
+obj <- featureSelectionStable(object = obj, mean_global_cut = 0.1,min_domain_prop = 0.2,          
+  max_abs_logfc_cut = 0.1, cv_cut = 0.2, max_num_gene = 10, use_low = FALSE)
+
 
 ## 3 — Labeling / null / spike-in gene sets ------------------------------------
 sets <- makeCustomGeneSets(
