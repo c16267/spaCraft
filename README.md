@@ -2,7 +2,7 @@
 
 # spaCraft
 
-> **Analysis-aware power calculation and sample-size planning for multi-sample spatial transcriptomics.**
+> **Calibrated power analysis and sample-size planning for multi-sample spatial transcriptomics**
 
 ![version](https://img.shields.io/badge/version-1.0.1-5E8CB6)
 ![R](https://img.shields.io/badge/R-%E2%89%A5%204.1.0-5E8CB6)
