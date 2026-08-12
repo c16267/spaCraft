@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use spaCraft in your research, please cite this software."
+title: "spaCraft: Analysis-Aware Power Calculation and Sample-Size Planning for Multi-Sample Spatial Transcriptomics"
+type: software
+version: 1.0.1
+date-released: 2026-07-17
+
+authors:
+  - family-names: "Shin"
+    given-names: "Jungmin"
+    email: "c16267@gmail.com"
+    orcid: "https://orcid.org/0009-0006-7471-0437"
+  - family-names: "Chung"
+    given-names: "Dongjun"
+    email: "chung.911@osu.edu"
+
+abstract: >-
+  spaCraft is a pilot-based framework for statistical power analysis and
+  sample-size determination in comparative multi-sample spatial transcriptomics
+  studies. It learns a cohort-level generative model for domain composition,
+  spatial geometry, and spatially correlated expression, then estimates power
+  through an analysis-aware generate-recover-test pipeline that re-discovers
+  spatial domains in every synthetic replicate. The framework provides
+  spatially adjusted differential-expression and domain-composition endpoints,
+  supports replicated and single-pilot designs, and has been evaluated across
+  Visium, Visium HD, and Stereo-seq platforms.
+
+repository-code: "https://github.com/c16267/spaCraft"
+url: "https://chunglab.bmi.osumc.edu/spaCraft/"
+
+keywords:
+  - "spatial transcriptomics"
+  - "power analysis"
+  - "sample-size planning"
+  - "spatial statistics"
+  - "multi-sample studies"
+  - "statistical genomics"
+  - "bioinformatics"
+  - "R package"
+  - "Shiny"
+
+license: "GPL-3.0-or-later"
