@@ -20,7 +20,7 @@ and **spatially correlated expression** jointly, re-discovers spatial domains in
 synthetic replicate, and runs the *same* tests an analyst would actually run — so the
 reported power reflects the real analysis pipeline, not an idealized oracle.
 
-▶ **Explore it live (R Shiny):** [chunglab.bmi.osumc.edu/spaCraft](https://chunglab.bmi.osumc.edu/spaCraft/)
+▶ **Explore it live (R Shiny):** [chunglab.bmi.osumc.edu/spaCraft](https://chunglab.bmi.osumc.edu/spaCraft/) \br
 ▶ **Zenodo:** [zenodo.org/records/21907013](https://zenodo.org/records/21907013/)
 
 
