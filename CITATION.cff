@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use spaCraft in your research, please cite this software."
-title: "spaCraft: Analysis-Aware Power Calculation and Sample-Size Planning for Multi-Sample Spatial Transcriptomics"
+title: "spaCraft: calibrated power analysis and sample-size planning for multi-sample spatial transcriptomics"
 type: software
 version: 1.0.1
 date-released: 2026-07-17
@@ -13,6 +13,10 @@ authors:
   - family-names: "Chung"
     given-names: "Dongjun"
     email: "chung.911@osu.edu"
+
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21907013"
 
 abstract: >-
   spaCraft is a pilot-based framework for statistical power analysis and
