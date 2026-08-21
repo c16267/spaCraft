@@ -45,55 +45,67 @@ import(methods)
 import(patchwork)
 import(stats)
 importFrom(BRISC,BRISC_estimation)
-importFrom(FNN,get.knn)
-importFrom(FNN,get.knnx)
-importFrom(FNN,knn.index)
+importFrom(FNN,
+  get.knn,
+  get.knnx,
+  knn.index
+)
 importFrom(MASS,mvrnorm)
 importFrom(Rcpp,sourceCpp)
 importFrom(clue,solve_LSAP)
-importFrom(dplyr,"%>%")
-importFrom(dplyr,bind_rows)
-importFrom(dplyr,distinct)
-importFrom(dplyr,group_by)
-importFrom(dplyr,mutate)
-importFrom(dplyr,pull)
-importFrom(dplyr,slice_head)
-importFrom(dplyr,summarise)
+importFrom(dplyr,
+  "%>%",
+  bind_rows,
+  distinct,
+  group_by,
+  mutate,
+  pull,
+  slice_head,
+  summarise
+)
 importFrom(graphics,plot)
-importFrom(limma,eBayes)
-importFrom(limma,squeezeVar)
+importFrom(limma,
+  eBayes,
+  squeezeVar
+)
 importFrom(mclust,adjustedRandIndex)
-importFrom(methods,is)
-importFrom(methods,new)
-importFrom(methods,validObject)
+importFrom(methods,
+  is,
+  new,
+  validObject
+)
 importFrom(parallel,mclapply)
 importFrom(scam,scam)
-importFrom(stats,binomial)
-importFrom(stats,coef)
-importFrom(stats,complete.cases)
-importFrom(stats,cov)
-importFrom(stats,dist)
-importFrom(stats,glm)
-importFrom(stats,isoreg)
-importFrom(stats,kmeans)
-importFrom(stats,median)
-importFrom(stats,p.adjust)
-importFrom(stats,plogis)
-importFrom(stats,prcomp)
-importFrom(stats,pt)
-importFrom(stats,qlogis)
-importFrom(stats,qnorm)
-importFrom(stats,qt)
-importFrom(stats,quantile)
-importFrom(stats,rbinom)
-importFrom(stats,rnorm)
-importFrom(stats,runif)
-importFrom(stats,sd)
-importFrom(stats,setNames)
-importFrom(stats,var)
-importFrom(stats,wilcox.test)
-importFrom(utils,head)
-importFrom(utils,modifyList)
-importFrom(utils,setTxtProgressBar)
-importFrom(utils,txtProgressBar)
+importFrom(stats,
+  binomial,
+  coef,
+  complete.cases,
+  cov,
+  dist,
+  glm,
+  isoreg,
+  kmeans,
+  median,
+  p.adjust,
+  plogis,
+  prcomp,
+  pt,
+  qlogis,
+  qnorm,
+  qt,
+  quantile,
+  rbinom,
+  rnorm,
+  runif,
+  sd,
+  setNames,
+  var,
+  wilcox.test
+)
+importFrom(utils,
+  head,
+  modifyList,
+  setTxtProgressBar,
+  txtProgressBar
+)
 useDynLib(spaCraft, .registration = TRUE)
