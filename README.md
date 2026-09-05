@@ -175,13 +175,13 @@ plotPowerCurveLOR(powLOR)
 > ```r
 > syn <- pBANSKY(sim, obj@pilot_data, lambda = 0.5, do_hungarian = TRUE)
 > syn <- setNames(lapply(syn, function(s) list(
-    counts = s$counts, coords = s$coords,
-    meta   = data.frame(sample_id = s$sample_id, group = s$group, stringsAsFactors = FALSE))),
-  vapply(syn, function(s) s$sample_id, character(1)))
+>    counts = s$counts, coords = s$coords,
+>    meta   = data.frame(sample_id = s$sample_id, group = s$group, stringsAsFactors = FALSE))),
+>  vapply(syn, function(s) s$sample_id, character(1)))
 > syn <- rearrangeSyntheticToPilot(syn, obj@pilot_data, match_by = "hat_d")
 > res <- SaLFC(syn, obj, genes = sets$G_spike,
-             target_domain = "WM", reference_domain = "Layer6",
-             domain_col = "hat_d", lfc_threshold = "pilot")
+>             target_domain = "WM", reference_domain = "Layer6",
+>             domain_col = "hat_d", lfc_threshold = "pilot")
 > ```
 
 ---
