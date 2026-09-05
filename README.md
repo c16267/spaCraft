@@ -173,6 +173,10 @@ plotPowerCurveLOR(powLOR)
 > **Tip.** To prototype a single design point, run the chain directly:
 >
 > ```r
+> sim <- simulatespaCraft(obj, n_sample_per_group = 5,
+>                        scenario_settings = list(DE_lfc = 0.4, lambda_cond = 0.5),
+>                        target_domain = "WM",
+>                        genes_to_simulate = sets$G_svg, de_genes = sets$G_spike)
 > syn <- pBANSKY(sim, obj@pilot_data, lambda = 0.5, do_hungarian = TRUE)
 > syn <- setNames(lapply(syn, function(s) list(
 >    counts = s$counts, coords = s$coords,
