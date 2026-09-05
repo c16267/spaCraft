@@ -134,7 +134,7 @@ obj <- estimateGeometryParams   (obj, n_cores = 4) #please check n_cores for you
 obj <- estimateExpressionParams (obj, target_domain = "WM", reference_domain = "Layer6",
                                  genes_to_use = sets$G_svg, n_cores = 4)
 
-plot(obj, type = "pilot", n_per_group = 2)          # inspect the pilot geometry
+plot(obj, type = "pilot", n_per_group = 3)          # inspect the pilot geometry
 
 ## 5 — (optional) tune spatial hyperparameters as a stable power oracle --------
 tuning <- tuneSpaDesignLambdas(
