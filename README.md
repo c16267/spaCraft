@@ -245,42 +245,20 @@ error). With `lambda_cond_selection = "per_effect"` (default), `evaluatePowerSaL
 
 ---
 
-## Function reference
-
-| Stage | Functions |
-|-------|-----------|
-| **Object & accessors** | `createspaCraftObject`, `spaCraft-class`, `syntheticData()`, `syntheticData<-()`, `testingResult()`, `testingResult<-()`, `addTestingResult()` |
-| **Feature / gene-set selection** | `featureSelection`, `featureSelectionStable`, `makeCustomGeneSets` |
-| **Generative model (3 layers)** | `estimateCompositionParams`, `estimateGeometryParams`, `estimateExpressionParams` |
-| **Simulate & recover domains** | `simulatespaCraft`, `pBANSKY`, `rearrangeSyntheticToPilot` |
-| **Endpoints & TREAT thresholds** | `SaLFC`, `LOR`, `estimate_lfc_threshold_from_pilot`, `estimate_lor_tau_from_pilot` |
-| **Power evaluation** | `evaluatePowerSaLFC`, `evaluatePowerLOR` |
-| **Reporting** | `summary()`, `print()`, `plotPowerCurveSaLFC`, `plotPowerCurveLOR`, `as_powerSaLFC`, `as_powerLOR` |
-| **Hyperparameter tuning** | `tuneSpaDesignLambdas` (+ `summary`/`plot` for `spaCraftTuning`) |
-| **Visualization** | `plot(<spaCraft>, type = c("pilot", "synthetic_raw", "synthetic_mapped"))` |
-
-`evaluatePowerSaLFC()` / `evaluatePowerLOR()` return a tagged data frame
-(`powerSaLFC` / `powerLOR`), so `print()`, `summary()`, and `plotPowerCurve*()` work on
-the returned object directly. If a `dplyr` pipeline strips the class, restore it with
-`as_powerSaLFC()` / `as_powerLOR()`.
-
----
 
 ## Citation
 
 If you use `spaCraft`, please cite the package (a methods manuscript is in preparation):
 
 ```
-Shin J, Xie J, and Chung D (2026). spaCraft: Analysis-Aware Power Calculation and
-Sample-Size Planning for Multi-Sample Spatial Transcriptomics.
+Shin J, Xie J, Xiaojie J, Qin M, and Chung D (2026). spaCraft: calibrated power analysis and sample-size planning for multi-sample spatial transcriptomics.
 R package version 1.0.1.
 ```
 
 ```bibtex
 @Manual{spaCraft,
-  title  = {spaCraft: Analysis-Aware Power Calculation and Sample-Size Planning
-            for Multi-Sample Spatial Transcriptomics},
-  author = {Jungmin Shin, Juan Xie, and Dongjun Chung},
+  title  = {spaCraft: calibrated power analysis and sample-size planning for multi-sample spatial transcriptomics},
+  author = {Jungmin Shin, Juan Xie, Xiaojie Jin, Qin Ma, and Dongjun Chung},
   year   = {2026},
   note   = {R package version 1.0.1}
 }
