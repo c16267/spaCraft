@@ -4,7 +4,7 @@
 
 > **Calibrated power analysis and sample-size planning for multi-sample spatial transcriptomics**
 
-![version](https://img.shields.io/badge/version-1.0.1-5E8CB6)
+![version](https://img.shields.io/badge/version-1.0.2-5E8CB6)
 ![R](https://img.shields.io/badge/R-%E2%89%A5%204.1.0-5E8CB6)
 ![license](https://img.shields.io/badge/license-GPL%20(%E2%89%A5%203)-5E8CB6)
 ![platforms](https://img.shields.io/badge/platforms-Visium%20%7C%20Visium%20HD%20%7C%20Stereo--seq-5E8CB6)
